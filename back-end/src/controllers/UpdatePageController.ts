@@ -6,7 +6,7 @@ export class UpdatePageController {
     const { id } = request.params;
     const { name } = request.body;
 
-    if (!id) return response.status(400).send({ error: "No 'id' provided" });
+    if (!id) return response.status(400).send({ error: "No id provided" });
 
     if (!name)
       return response.status(400).send({ error: "No 'name' provided" });

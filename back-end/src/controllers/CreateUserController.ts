@@ -2,9 +2,9 @@ import { Request, Response } from "express";
 import prisma from "../database/prisma";
 import bcrypt from "bcrypt";
 
-export class CreateNewUserController {
+export class CreateUserController {
   async handle(request: Request, response: Response) {
-    const { user, email, password, name, last_name, premium } = request.body;
+    const { user, email, password, name, last_name } = request.body;
 
     const userVerification = await prisma.clients.findFirst({
       where: { user },
@@ -33,7 +33,7 @@ export class CreateNewUserController {
             password: hash,
             name,
             last_name,
-            premium,
+            premium: 0,
             updated_at: new Date(),
           },
         });
