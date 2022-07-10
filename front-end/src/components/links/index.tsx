@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Container, Link } from "./styles";
 
 interface Props {

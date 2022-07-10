@@ -8,7 +8,7 @@
 
 - After you are done installing the dependencies run `npm run dev` or `yarn dev`.
 
-### You can check how the front end of the project is progressing by clicking [here](https://social-three.netlify.app/).
+### You can check how the front end of the project is progressing by clicking [here](https://linkbranch.vercel.app/).
 
 ### UI / UX - Maratona Explorer 2.0 of Rocketseat
 

@@ -8,6 +8,8 @@ import { Navbar } from "./components/navbar";
 import { ThemeProvider } from "styled-components";
 import dark from "./assets/styles/themes/dark";
 import light from "./assets/styles/themes/light";
+import { BrowserRouter } from "react-router-dom";
+import { MainRoutes } from "./routes";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState(light);
@@ -40,15 +42,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Navbar />
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <MainRoutes />
+        <Navbar />
 
-      <Links />
+        <Switcher toggleTheme={toggleTheme} />
 
-      <Switcher toggleTheme={toggleTheme} />
-
-      <GlobalStyle />
-    </ThemeProvider>
+        <GlobalStyle />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
